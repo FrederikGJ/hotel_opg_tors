@@ -19,4 +19,13 @@ public class HotelEntity {
     Integer id;
     String name;
     String address;
+
+    public HotelEntity hotelDTOtoEntity(HotelEntity hotelEntity){
+        return HotelEntity.builder()
+                .id(hotelEntity.getId())
+                .name(hotelEntity.getName())
+                .address(hotelEntity.getAddress())
+                .build();
+    };
+
 }
